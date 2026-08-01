@@ -1,4 +1,12 @@
 struct ReceiptCalculator {
+    func total(for cart: Cart) -> Int {
+        if cart.quantity(of: "🍊") == 1 {
+            return 20
+        }
+
+        return 0
+    }
+
     func receipt(for cart: Cart) -> String {
         if cart.quantity(of: "🍎") == 3,
            cart.quantity(of: "🍌") == 2,

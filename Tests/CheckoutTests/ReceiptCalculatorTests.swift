@@ -2,6 +2,13 @@ import XCTest
 @testable import Checkout
 
 final class ReceiptCalculatorTests: XCTestCase {
+    func testSingleOrangeTotalUsesUnitPrice() {
+        var cart = Cart()
+        cart.add("🍊")
+
+        XCTAssertEqual(ReceiptCalculator().total(for: cart), 20)
+    }
+
     func testSingleOrangeReceiptIncludesUnitPriceAndTotal() {
         var cart = Cart()
         cart.add("🍊")
