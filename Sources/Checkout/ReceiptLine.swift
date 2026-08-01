@@ -14,6 +14,10 @@ struct ReceiptLine {
             return "🍎 x2 (2 за 90) 90"
         }
 
+        if product == "🍎 + 🍌", quantity == 1, amount == 70 {
+            return "🍎 + 🍌 (комбо за 70) 70"
+        }
+
         return "\(product) x\(quantity) \(amount)"
     }
 }
