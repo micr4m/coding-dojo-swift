@@ -25,6 +25,18 @@ final class ReceiptCalculatorTests: XCTestCase {
         XCTAssertEqual(ReceiptCalculator().total(for: cart), 70)
     }
 
+    func testCombinedCartTotalAppliesAllRules() {
+        var cart = Cart()
+        cart.add("🍎")
+        cart.add("🍎")
+        cart.add("🍎")
+        cart.add("🍌")
+        cart.add("🍌")
+        cart.add("🍊")
+
+        XCTAssertEqual(ReceiptCalculator().total(for: cart), 220)
+    }
+
     func testSingleOrangeReceiptIncludesUnitPriceAndTotal() {
         var cart = Cart()
         cart.add("🍊")
