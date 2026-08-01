@@ -7,4 +7,10 @@ final class ReceiptLineTests: XCTestCase {
 
         XCTAssertEqual(line.text, "🍊 x1 20")
     }
+
+    func testTwoApplesUsesSpecialPriceFormat() {
+        let line = ReceiptLine(product: "🍎", quantity: 2, amount: 90)
+
+        XCTAssertEqual(line.text, "🍎 x2 (2 за 90) 90")
+    }
 }
