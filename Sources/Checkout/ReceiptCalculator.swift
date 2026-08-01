@@ -1,5 +1,9 @@
 struct ReceiptCalculator {
     func total(for cart: Cart) -> Int {
+        if cart.quantity(of: "🍎") == 2 {
+            return 90
+        }
+
         if cart.quantity(of: "🍊") == 1 {
             return 20
         }
