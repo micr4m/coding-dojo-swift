@@ -17,4 +17,12 @@ final class CartTests: XCTestCase {
 
         XCTAssertEqual(cart.quantity(of: "🍌"), 1)
     }
+
+    func testQuantityOfAddedOrangeIsOne() {
+        var cart = Cart()
+
+        cart.add("🍊")
+
+        XCTAssertEqual(cart.quantity(of: "🍊"), 1)
+    }
 }

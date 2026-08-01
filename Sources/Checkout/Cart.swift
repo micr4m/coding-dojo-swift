@@ -1,6 +1,7 @@
 struct Cart {
     private var appleQuantity = 0
     private var bananaQuantity = 0
+    private var orangeQuantity = 0
 
     mutating func add(_ product: String) {
         if product == "🍎" {
@@ -9,6 +10,10 @@ struct Cart {
 
         if product == "🍌" {
             bananaQuantity += 1
+        }
+
+        if product == "🍊" {
+            orangeQuantity += 1
         }
     }
 
@@ -19,6 +24,10 @@ struct Cart {
 
         if product == "🍌" {
             return bananaQuantity
+        }
+
+        if product == "🍊" {
+            return orangeQuantity
         }
 
         return 0
