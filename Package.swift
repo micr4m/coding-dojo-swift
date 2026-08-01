@@ -2,18 +2,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "CodingDojoSwift",
+    name: "CheckoutKata",
     products: [
         .library(
-            name: "GameOfLife",
-            targets: ["GameOfLife"]
+            name: "Checkout",
+            targets: ["Checkout"]
         )
     ],
     targets: [
-        .target(name: "GameOfLife"),
+        .target(name: "Checkout"),
         .testTarget(
-            name: "GameOfLifeTests",
-            dependencies: ["GameOfLife"]
+            name: "CheckoutTests",
+            dependencies: ["Checkout"]
         )
     ]
 )

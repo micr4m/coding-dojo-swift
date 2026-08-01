@@ -1,6 +1,6 @@
-# Template Swift Project for Coding Dojo
+# Checkout Kata
 
-A small [Swift Package Manager](https://www.swift.org/documentation/package-manager/) project prepared for a Game of Life coding dojo.
+A small [Swift Package Manager](https://www.swift.org/documentation/package-manager/) project prepared for the checkout kata.
 
 ## Requirements
 
@@ -32,11 +32,11 @@ xed .
 ## Project structure
 
 ```
-Sources/GameOfLife/       Production code
-Tests/GameOfLifeTests/    XCTest test suite
+Sources/Checkout/       Production code
+Tests/CheckoutTests/    XCTest test suite
 ```
 
-The project contains one deliberately small, passing example: an empty world stays empty. It confirms that the test runner works before the dojo starts. From there, evolve the code and tests in small TDD steps.
+Start with one small failing test. Evolve the code only through short TDD cycles.
 
 ## Useful commands
 
