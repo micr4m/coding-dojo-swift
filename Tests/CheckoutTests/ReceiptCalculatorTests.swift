@@ -20,4 +20,14 @@ final class ReceiptCalculatorTests: XCTestCase {
 
         XCTAssertEqual(receipt, "🍎 x2 (2 за 90) 90\nИтого 90")
     }
+
+    func testAppleAndBananaReceiptIncludesComboPriceAndTotal() {
+        var cart = Cart()
+        cart.add("🍎")
+        cart.add("🍌")
+
+        let receipt = ReceiptCalculator().receipt(for: cart)
+
+        XCTAssertEqual(receipt, "🍎 + 🍌 (комбо за 70) 70\nИтого 70")
+    }
 }
